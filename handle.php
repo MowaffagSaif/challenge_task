@@ -1,7 +1,6 @@
 <?php
 require 'source.php'; 
 
-
 if(isset($_POST['check'])){
     $ip = $_POST['ip'] ;
     $url = "http://services.codesoft.sd/iplocation?ip=".$ip ;
@@ -11,7 +10,7 @@ if(isset($_POST['check'])){
     echo "Country name: ".$myArray["countryname"]. "<br>";
     echo "Country Code: ".$myArray["countrycode2"]. "<br>";
     echo "IP Entered IS : " . $ip . "<br>" ;
-    
+
     $code = $myArray["countrycode2"];
     $url2 = "http://services.codesoft.sd/time?q=".$code ;
     $dataOfCode = handleIp($code, $url2);
@@ -20,13 +19,4 @@ if(isset($_POST['check'])){
 
     echo "Zone name:".$myArray2["zonename"]. "<br>";
     echo "Time:".$myArray2["time"];
-
 }
-?>
-
-<form action="" method="post">
-        <h3>Write anthor an IP to display country</h3>
-        <input type="text" placeholder="Write IP" name="ip" required />             
-        <input type="submit" value="Check" name="check">
-            
-</form>
