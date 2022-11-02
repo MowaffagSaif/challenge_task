@@ -22,3 +22,11 @@ if(isset($_POST['check'])){
     echo "Time:".$myArray2["time"];
 
 }
+?>
+
+<form action="" method="post">
+        <h3>Write anthor an IP to display country</h3>
+        <input type="text" placeholder="Write IP" name="ip" required />             
+        <input type="submit" value="Check" name="check">
+            
+</form>
