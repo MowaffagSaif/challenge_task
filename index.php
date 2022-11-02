@@ -7,12 +7,14 @@
     <title>Challenge Task</title>
 </head>
 <body>
-    <form action="handle.php" method="post">
+    <form action="" method="post">
             <h3>Write an IP to display country</h3>
-            <input type="text" placeholder="Write IP" name="ip" required />             
+            <input type="text" value="<?php if(isset($_POST["ip"])){echo $_POST["ip"];} ?>" name="ip" required />             
             <input type="submit" value="Check" name="check">
             
     </form>
 
 </body>
 </html>
+
+<?php require "handle.php"; ?> 
